@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.neural_network import MLPRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import StandardScaler
 from scipy.interpolate import griddata
 from typing import Dict, Any
 

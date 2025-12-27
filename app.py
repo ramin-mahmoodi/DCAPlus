@@ -28,11 +28,28 @@ from dca.enterprise import CloudConnector, normalize_type_curve, generate_narrat
 
 # -- PAGE CONFIG --
 st.set_page_config(
-    page_title="DCA-Plus v5.0 Ultra",
+    page_title="DCA-Plus v1.0",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# -- CACHED FUNCTIONS (OPTIMIZATION) --
+@st.cache_data(show_spinner=False)
+def cached_fit_all_models(t, q, metric, auto_clean):
+    return fit_all_models_advanced(t, q, metric=metric, auto_clean=auto_clean)
+
+@st.cache_data(show_spinner=False)
+def cached_run_bayesian(t, q, iterations):
+    return run_bayesian_fit(t, q, iterations=iterations)
+
+@st.cache_data(show_spinner=False)
+def cached_history_match(t, q):
+    return auto_history_match(t, None, q)
+
+@st.cache_data(show_spinner=False)
+def cached_neural_forecast(t, q):
+    return train_neural_forecast(t, q)
 
 def model_function(name, t, params):
     from dca.models import exponential_decline, harmonic_decline, hyperbolic_decline
@@ -42,8 +59,8 @@ def model_function(name, t, params):
     return np.zeros_like(t)
 
 def main():
-    st.sidebar.title("⚡ DCA-Plus v5.0")
-    st.sidebar.caption("Ultra-Enterprise Edition")
+    st.sidebar.title("⚡ DCA-Plus v1.0")
+    st.sidebar.caption("Enterprise Edition")
     st.sidebar.markdown("---")
     
     category = st.sidebar.selectbox("Module Category", ["Core Engineering", "Advanced Physics", "ML & Analytics", "Enterprise Tools"])
