@@ -107,5 +107,3 @@ Contributions are welcome! Please fork the repository and submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-*Built with ❤️ by the Antigravity Team*
