@@ -28,7 +28,7 @@ from dca.enterprise import CloudConnector, normalize_type_curve, generate_narrat
 
 # -- PAGE CONFIG --
 st.set_page_config(
-    page_title="DCA-Plus v1.0",
+    page_title="DCA-Plus",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -59,7 +59,7 @@ def model_function(name, t, params):
     return np.zeros_like(t)
 
 def main():
-    st.sidebar.title("⚡ DCA-Plus v1.0")
+    st.sidebar.title("⚡ DCA-Plus")
     st.sidebar.caption("Enterprise Edition")
     st.sidebar.markdown("---")
     
