@@ -17,7 +17,7 @@
 *   **Probabilistic Forecasting**: Monte Carlo simulation for P10/P50/P90 UR uncertainty.
 *   **Economics**: Discounted Cash Flow (DCF), NPV, ROI, and Payout analysis.
 
-### 🛑 Advanced Physics (v5.0)
+### 🛑 Advanced Physics
 *   **Rate Transient Analysis (RTA)**: Blasingame Type Curves for pressure-rate analysis.
 *   **PVT simulator**: 0D Material Balance tank model for reservoir pressure tracking.
 *   **Auto-History Matching**: Inverse solver to determine Oil-In-Place (N) and Productivity Index (J).
